@@ -37,6 +37,11 @@ there are a lot of neat things you can do here, feel free to modify and open a P
 1. Navigate to `/public/` and run `npm install` this will install all of the required node modules for building the frontend (this requires having the latest version of  node installed)
 2. from the `/public/` directory  run `npm run build` this will generate the CSS, and bundle up the JS and put them in their respective folders under `/public/build/`
 
+## TODO
+- [ ] add yard to frontend build process (dependency manager)
+- [ ] Add basic styling
+- [ ] add packagist repos for PDG most used plugins
+
 ## Other Resources
 
 * [ES6 goodies](https://ponyfoo.com/articles/es6)

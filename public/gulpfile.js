@@ -23,7 +23,7 @@ var
 
 //image processing
 gulp.task('images', function () {
-    var out = folders.build + '_images/';
+    var out = folders.build + 'images/';
     return gulp.src(folders.src + '_images/**/*')
         .pipe(newer(out))
         .pipe(imagemin({optimizationLevel: 5}))
