@@ -41,6 +41,7 @@ there are a lot of neat things you can do here, feel free to modify and open a P
 - [ ] add yard to frontend build process (dependency manager)
 - [ ] Add basic styling
 - [ ] add packagist repos for PDG most used plugins
+- [ ] (Potential) -> Add this theme to a Trellis install for simple set up
 
 ## Other Resources
 
