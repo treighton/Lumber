@@ -1,6 +1,10 @@
-# The PDG Starter Theme
+# The Lumber Starter Theme
 
-"A great forking theme" This theme comes with everything that is in "_s", "Timber Starter Theme", plus a frontend build using gulp and webpack. 
+![Super Sweet Logo](screenshot.png)
+
+"A great forking theme" comes set up to use Timber, Gulp, Webpack, Babel, and Less. This theme currently does not have any default styling so that you have a completely blank slate to start with! 
+
+Go forth and build!
 
 ## Why build another starter theme?
 The thought process behind this theme is trying to take an already great starter theme and implement modern build processes, and dependency management using the best tools currently available.
@@ -20,7 +24,7 @@ The thought process behind this theme is trying to take an already great starter
 Install this theme as you would any other, and be sure the Timber plugin is activated. But hey, let's break it down into some bullets:
 
 1. Download the zip for this theme (or clone) and move it to `wp-content/themes` in your WordPress installation. 
-2. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase). You could keep the name `timber-starter-theme` but the point of a starter theme is to make it your own!
+2. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase). You could keep the name `lumber-starter-theme` but the point of a starter theme is to make it your own!
 3. Install the Timber Plugin:
     1. Method 1: install as you would a normal plugin
     2. Method 2 (preferred): 
@@ -34,14 +38,11 @@ Install this theme as you would any other, and be sure the Timber plugin is acti
 The frontend uses Less and ES6, with Gulp to run tasks, and Webpack to bundle up the JS.
 there are a lot of neat things you can do here, feel free to modify and open a PR if you think your gulp tasks or Webpack config can help others.
 
-1. Navigate to `/public/` and run `npm install` this will install all of the required node modules for building the frontend (this requires having the latest version of  node installed)
-2. from the `/public/` directory  run `npm run build` this will generate the CSS, and bundle up the JS and put them in their respective folders under `/public/build/`
+1. Navigate to `/public/` and run `yarn install` this will install all of the required node modules for building the frontend (this requires having the latest version of  node installed)
+2. from the `/public/` directory  run `yarn run build` this will generate the CSS, and bundle up the JS and put them in their respective folders under `/public/build/`
 
 ## TODO
-- [ ] add yard to frontend build process (dependency manager)
-- [ ] Add basic styling
-- [ ] add packagist repos for PDG most used plugins
-- [ ] (Potential) -> Add this theme to a Trellis install for simple set up
+- [ ] Feel Free to make suggestions, and ask questions!
 
 ## Other Resources
 

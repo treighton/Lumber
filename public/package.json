@@ -9,7 +9,7 @@
   "scripts": {
     "webp": "webpack --progress --colors --watch",
     "assets": "gulp",
-    "build":"concurrently \"npm run webp\" \"npm run assets\""
+    "build": "concurrently \"npm run webp\" \"npm run assets\""
   },
   "author": "",
   "license": "ISC",
@@ -37,6 +37,7 @@
     "postcss-assets": "^4.1.0"
   },
   "dependencies": {
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "yarn": "^1.1.0"
   }
 }
