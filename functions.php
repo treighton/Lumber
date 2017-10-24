@@ -25,6 +25,7 @@ class StarterSite extends TimberSite {
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+		add_action('wp_enqueue_scripts', array($this, 'load_theme_files'));
 		parent::__construct();
 	}
 
@@ -36,10 +37,13 @@ class StarterSite extends TimberSite {
 		//this is where you can register custom taxonomies
 	}
 
+	function add_theme_styles(){
+		$theme = wp_get_theme();
+		wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/public/build/css/style.css', null, $theme->get( 'Version' ), 'all' );
+		wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/public/build/js/js', null, $theme->get( 'Version' ), true );
+	}
+
 	function add_to_context( $context ) {
-		$context['foo'] = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
 		return $context;

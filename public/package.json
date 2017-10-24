@@ -1,7 +1,7 @@
 {
-  "name": "pdg17",
+  "name": "LumberStarterTheme",
   "version": "1.0.0",
-  "description": "The \"_s\" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your Sass, scripts, and task runners however you would like!",
+  "description": "A WP Starter theme using Timber, with a modern build workflow with Yarn, Gulp, Webpack, and more!",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -14,27 +14,30 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.7.6",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.2.1",
     "babel-preset-es2015": "^6.24.1",
     "concurrently": "^3.4.0",
-    "moment": "^2.18.1",
-    "webpack": "2.2.1",
-    "autoprefixer": "^6.7.6",
-    "babel-preset-env": "^1.2.1",
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
+    "gulp-header": "^1.8.9",
     "gulp-imagemin": "^3.1.1",
     "gulp-less": "^3.3.0",
     "gulp-newer": "^1.3.0",
     "gulp-postcss": "^6.3.0",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-strip-debug": "^1.1.0",
+    "gulp-stylelint": "^5.0.0",
     "gulp-uglify": "^2.0.1",
     "imagesloaded": "^4.1.1",
     "isotope-layout": "^3.0.2",
-    "postcss-assets": "^4.1.0"
+    "moment": "^2.19.1",
+    "postcss-assets": "^4.1.0",
+    "stylelint-config-recommended": "^1.0.0",
+    "webpack": "2.2.1"
   },
   "dependencies": {
     "whatwg-fetch": "^2.0.3",

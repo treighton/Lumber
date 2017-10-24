@@ -4,10 +4,10 @@ var webpack = require('webpack');
 module.exports = {
     devtool: 'inline-sourcemap',
     context: __dirname,
-    entry: "./src/js/index.js",
+    entry: __dirname+"/src/_js/index.js",
     output: {
         path: "./build/js/",
-        publicPath: '/build/js/',
+        publicPath: '/',
         filename: "app.js"
     },
     module: {

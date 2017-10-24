@@ -25,18 +25,28 @@ Install this theme as you would any other, and be sure the Timber plugin is acti
 
 1. Download the zip for this theme (or clone) and move it to `wp-content/themes` in your WordPress installation. 
 2. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase). You could keep the name `lumber-starter-theme` but the point of a starter theme is to make it your own!
-3. Install the Timber Plugin:
+3. Update `package.json` with the correct `name` and `description` (this will automatically be added to the `style.css` for the theme).
+4. **Go through the *BUILD PROCESS* detailed below before moving on** 
+4. Install the Timber Plugin:
     1. Method 1: install as you would a normal plugin
     2. Method 2 (preferred): 
         1. Ensure that `composer` is installed (install [here](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx))
         2. from the theme root directory run `composer install` 
-2. Activate the theme in Appearance >  Themes.
-3. Do your thing! And read [the docs](https://github.com/jarednova/timber/wiki).
+5. Activate the theme in Appearance >  Themes.
+6. Do your thing! And read [the docs](https://github.com/jarednova/timber/wiki).
 
 ## Building the Frontend
 
 The frontend uses Less and ES6, with Gulp to run tasks, and Webpack to bundle up the JS.
 there are a lot of neat things you can do here, feel free to modify and open a PR if you think your gulp tasks or Webpack config can help others.
+
+**YOU WILL NEED TO ENSURE THAT NODE AND YARN ARE INSTALLED BEFORE MOVING ON**
+
+**NODE**
+`brew install node`
+
+**YARN**
+`brew install yarn`
 
 1. Navigate to `/public/` and run `yarn install` this will install all of the required node modules for building the frontend (this requires having the latest version of  node installed)
 2. from the `/public/` directory  run `yarn run build` this will generate the CSS, and bundle up the JS and put them in their respective folders under `/public/build/`
