@@ -37,6 +37,19 @@ class StarterSite extends TimberSite {
 		//this is where you can register custom taxonomies
 	}
 
+	function get_icon($file) {
+		$theme_url = get_theme_file_path();
+		$icon = file_get_contents($theme_url.'/public/build/_images/'.$file.'.svg');
+		return $icon;
+	}
+
+	function get_image_from_server($file) {
+		$theme_url = get_theme_file_uri();
+		$image = '<img src="'.$theme_url.'/public/build/_images/'.$file.'" />';
+		return $image;
+	}
+
+
 	function add_theme_styles(){
 		$theme = wp_get_theme();
 		wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/public/build/css/style.css', null, $theme->get( 'Version' ), 'all' );
@@ -57,7 +70,8 @@ class StarterSite extends TimberSite {
 	function add_to_twig( $twig ) {
 		/* this is where you can add your own functions to twig */
 		$twig->addExtension( new Twig_Extension_StringLoader() );
-		$twig->addFilter('myfoo', new Twig_SimpleFilter('myfoo', array($this, 'myfoo')));
+		$twig->addFunction(new Timber\Twig_Function( 'get_image_from_server', array($this, 'get_image_from_server') ));
+		$twig->addFunction( new Timber\Twig_Function( 'get_icon', array($this, 'get_icon') ) );
 		return $twig;
 	}
 
