@@ -42,5 +42,6 @@
   "dependencies": {
     "whatwg-fetch": "^2.0.3",
     "yarn": "^1.1.0"
-  }
+  },
+  "repository": "https://github.com/treighton/Lumber"
 }

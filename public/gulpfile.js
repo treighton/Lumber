@@ -39,7 +39,7 @@ gulp.task('css', function() {
 
     postCssOpts.push(cssnano);
 
-    return gulp.src(folders.src + '_less/style.less')
+    return gulp.src(folders.src + '_less/styles.less')
         .pipe(less({ style: 'compressed' }))
         .pipe(postcss(postCssOpts))
         .pipe(gulp.dest(folders.build + 'css/'));
