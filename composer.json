@@ -2,27 +2,15 @@
     "name": "treighton/lumber",
     "description": "a great place to start when using timber",
     "type": "wordpress-theme",
+      "type": "wordpress-plugin",
+    "require": {
+      "php": ">=5.3.2",
+      "composer/installers": "v1.0.6"
+    },
     "authors": [
         {
             "name": "Treighton",
             "email": "treighton@gmail.com"
         }
     ],
-      "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org"
-    }
-  ],
-    "extra": {
-        "installer-paths": {
-            "../../plugins/{$name}/": [
-                "wpackagist-plugin/*",
-                "type:wordpress-plugin"
-            ]
-        }
-    },
-  "require": {
-      "wpackagist-plugin/timber-library": "0.22.*"
-    }
 }
