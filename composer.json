@@ -1,15 +1,14 @@
 {
-    "name": "treighton/lumber",
-    "description": "a great place to start when using timber",
+    "name": "treighton/starter-theme",
+    "description": "Lumber is a kick ass starter theme",
     "type": "wordpress-theme",
-    "require": {
-      "php": ">=5.3.2",
-      "composer/installers": "v1.0.6"
-    },
+    "license": "MIT",
     "authors": [
         {
             "name": "Treighton",
             "email": "treighton@gmail.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+    "require": {}
 }
