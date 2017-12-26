@@ -23,38 +23,24 @@ class StarterSite extends TimberSite {
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
-		add_action( 'init', array( $this, 'register_post_types' ) );
-		add_action( 'init', array( $this, 'register_taxonomies' ) );
-		add_action('wp_enqueue_scripts', array($this, 'load_theme_files'));
+		add_action('wp_enqueue_scripts', array($this, 'add_theme_styles'));
 		parent::__construct();
 	}
 
-	function register_post_types() {
-		//this is where you can register custom post types
-	}
-
-	function register_taxonomies() {
-		//this is where you can register custom taxonomies
-	}
-
-	function get_icon($file) {
-		$theme_url = get_theme_file_path();
-		$icon = file_get_contents($theme_url.'/public/build/_images/'.$file.'.svg');
-		return $icon;
-	}
-
-	function get_image_from_server($file) {
-		$theme_url = get_theme_file_uri();
-		$image = '<img src="'.$theme_url.'/public/build/_images/'.$file.'" />';
-		return $image;
-	}
-
+	/**
+	 * Add any additional style enqueues in this metod
+	 */
 
 	function add_theme_styles(){
 		$theme = wp_get_theme();
-		wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/public/build/css/style.css', null, $theme->get( 'Version' ), 'all' );
+		wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/public/build/css/styles.css', null, $theme->get( 'Version' ), 'all' );
 		wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/public/build/js/js', null, $theme->get( 'Version' ), true );
 	}
+
+	/**
+	 * Add to the global context here.
+	 * ie. ACF Options
+	 */
 
 	function add_to_context( $context ) {
 		$context['menu'] = new TimberMenu();
@@ -62,10 +48,26 @@ class StarterSite extends TimberSite {
 		return $context;
 	}
 
-	function myfoo( $text ) {
-		$text .= ' bar!';
-		return $text;
+	/**
+	 * Adds custom function to get svg icons to Twig
+	 */
+
+	function get_icon($file) {
+		$theme_url = get_theme_file_path();
+		$icon = file_get_contents($theme_url.'/public/build/_images/'.$file.'.svg');
+		return $icon;
 	}
+
+	/**
+	 * Adds custom function to get Images from the theme file to Twig
+	 */
+
+	function get_image_from_server($file) {
+		$theme_url = get_theme_file_uri();
+		$image = '<img src="'.$theme_url.'/public/build/_images/'.$file.'" />';
+		return $image;
+	}
+
 
 	function add_to_twig( $twig ) {
 		/* this is where you can add your own functions to twig */
@@ -78,3 +80,9 @@ class StarterSite extends TimberSite {
 }
 
 new StarterSite();
+
+/**
+ *
+ * DO NOT WRITE PHP BELOW HERE
+ *
+ */
