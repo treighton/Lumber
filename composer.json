@@ -3,7 +3,7 @@
     "description": "a kick as starter theme",
     "type": "wordpress-theme",
     "license": "MIT",
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Treighton",
