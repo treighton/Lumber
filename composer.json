@@ -9,5 +9,21 @@
             "email": "treighton@gmail.com"
         }
     ],
-    "require": {}
+    "repositories": [
+        {
+          "type": "composer",
+          "url": "https://wpackagist.org"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+          "../../plugins/{$name}/": [
+            "wpackagist-plugin/*",
+            "type:wordpress-plugin"
+          ]
+        }
+    },
+    "require": {
+      "wpackagist-plugin/timber-library": "0.22.*"
+    }
 }
