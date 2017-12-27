@@ -1,6 +1,6 @@
 {
     "name": "treighton/lumber",
-    "description": ""A great forking theme" comes set up to use Timber, Gulp, Webpack, Babel, and Less. This theme currently does not have any default styling so that you have a completely blank slate to start with!",
+    "description": "A great forking theme comes set up to use Timber, Gulp, Webpack, Babel, and Less. This theme currently does not have any default styling so that you have a completely blank slate to start with!",
     "type": "wordpress-theme",
     "license": "MIT",
     "authors": [
