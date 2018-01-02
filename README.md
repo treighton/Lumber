@@ -1,4 +1,4 @@
-# The Lumber Starter Theme
+#  Maderas - A WordPress starter theme
 
 ![Super Sweet Logo](screenshot.png)
 
