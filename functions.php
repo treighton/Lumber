@@ -54,6 +54,10 @@ class StarterSite extends TimberSite {
 
 	function get_icon($file) {
 		$theme_url = get_theme_file_path();
+		$file = $theme_url.'/public/build/_images/'.$file.'.svg';
+		if(!file_exists(file)) {
+			return $file.' Does not seem to be a real thing, dbl chiggity check yo file name';
+		}
 		$icon = file_get_contents($theme_url.'/public/build/_images/'.$file.'.svg');
 		return $icon;
 	}
