@@ -49,7 +49,15 @@ there are a lot of neat things you can do here, feel free to modify and open a P
 `brew install yarn`
 
 1. Navigate to `/public/` and run `yarn install` this will install all of the required node modules for building the frontend (this requires having the latest version of  node installed)
-2. from the `/public/` directory  run `yarn run build` this will generate the CSS, and bundle up the JS and put them in their respective folders under `/public/build/`
+2. from the `/public/` directory  
+
+    - **FOR LESS && SCSS** run `yarn build` this will generate the CSS, and bundle up the JS and put them in their respective folders under `/public/build/`
+
+    - **FOR SCSS ONLY** run `yarn webp` this will generate the CSS, and bundle up the JS and put them in their respective folders under `/public/build/`
+
+**NOTE**
+
+require('bootstrap') will load all of Bootstrap’s jQuery plugins onto the jQuery object. The bootstrap module itself does not export anything. You can manually load Bootstrap’s jQuery plugins individually by loading the /js/*.js files under the package’s top-level directory.
 
 ## TODO
 - [ ] Feel Free to make suggestions, and ask questions!

@@ -4,3 +4,7 @@ node_modules
 \.idea/
 
 \.DS_Store
+
+public/yarn-error\.log
+
+public/build/
