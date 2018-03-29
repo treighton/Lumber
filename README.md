@@ -51,7 +51,6 @@ there are a lot of neat things you can do here, feel free to modify and open a P
 1. Navigate to `/public/` and run `yarn install` this will install all of the required node modules for building the frontend (this requires having the latest version of  node installed)
 2. from the `/public/` directory  
     * **FOR LESS && SCSS** run `yarn build` this will generate the CSS, and bundle up the JS and put them in their respective folders under `/public/build/`
-
     * **FOR SCSS ONLY** run `yarn webp` this will generate the CSS, and bundle up the JS and put them in their respective folders under `/public/build/`
 
 **NOTE**
